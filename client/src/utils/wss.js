@@ -3,7 +3,7 @@ import { store } from "../redux/store";
 import { SetParticipants, SetRoomId } from "../redux/slices/app";
 import * as webRTCHandler from "./webRTCHandler";
 
-const SERVER = "http://localhost:3000";
+const SERVER = "https://chat-application-z235.onrender.com";
 
 let socket = null;
 
