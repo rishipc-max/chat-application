@@ -8,7 +8,9 @@ export default defineConfig({
   define: {
     global: "globalThis",
   },
-
+  build: {
+    outDir: 'dist',
+  },
   resolve: {
     alias: {
       "readable-stream": "vite-compatible-readable-stream",
