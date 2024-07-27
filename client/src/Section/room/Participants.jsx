@@ -1,4 +1,4 @@
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 import ChatBox from "../../components/ChatBox";
@@ -7,15 +7,17 @@ import ChatBox from "../../components/ChatBox";
 const Participants = () => {
   const theme = useTheme();
   const { participants } = useSelector((state) => state.app);
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Box
+    
       position={"relative"}
       justifyContent={"space-between"}
       sx={{
         p: 2,
         width: 320,
         height: 1,
-        display: "flex",
+        display: isSmallScreen ? "none" : "flex",
         flexDirection: "column",
         borderRight: `1px solid ${theme.palette.divider}`,
       }}

@@ -1,16 +1,17 @@
-import { Box, IconButton, InputAdornment, TextField, Typography } from "@mui/material";
+import { Box, IconButton, InputAdornment, TextField, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { PaperPlaneTilt } from "@phosphor-icons/react"
 
 
 const GroupChat = () => {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Box sx={{
         width: 320,
         height:1,
         borderLeft: `1px solid ${theme.palette.divider}`,
-        display: 'flex',
+        display: isSmallScreen ? "none" : "flex",
         flexDirection: 'column',
         p: 2,
     }}>

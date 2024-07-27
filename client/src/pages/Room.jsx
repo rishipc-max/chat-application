@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import * as webRTCHandler from "../utils/webRTCHandler";
 import {useSelector} from "react-redux";
 import Overlay from "../Section/room/Overlay";
-import ToggleSwitch from "../components/ToggleTheme";
+// import ToggleSwitch from "../components/ToggleTheme";
 
 const Room = () => {
 
@@ -34,7 +34,7 @@ const Room = () => {
 
     {/* Label (Showcasing ID)*/}
     <Label />
-    <ToggleSwitch />
+    {/* <ToggleSwitch /> */}
     { showOverlay && <Overlay />}
     </Stack>
   )

@@ -11,7 +11,7 @@ import { Typography } from "@mui/material";
 import { faker } from "@faker-js/faker";
 //import styled from "@emotion/styled";
 import { useState } from "react";
-import { CaretDown, CaretUp, PaperPlaneTilt, Smiley, X } from "phosphor-react";
+import { CaretUp, PaperPlaneTilt, Smiley, X } from "phosphor-react";
 import { useSelector } from "react-redux";
 
 const ChatBox = () => {

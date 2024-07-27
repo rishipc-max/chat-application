@@ -8,7 +8,7 @@
 .css-1k5csn-MuiInputBase-input-MuiFilledInput-input{
   padding-top: 12px;
 }
-.videos_portal_styles {
+/* .videos_portal_styles {
     margin-left: 25%;
     width: 50%;
     height: calc(100vh - 32%);
@@ -17,6 +17,32 @@
     position: absolute;
     display: flex;
     flex-wrap: wrap;
+  } */
+  @media (max-width: 2400px) {
+    .videos_portal_styles {
+      margin-left: 25%;
+      width: 50%;
+      height: calc(100vh - 32%);
+      left: 2.5%;
+      top: 13%;
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    .videos_portal_styles {
+      margin-left: 0;
+      width: 100%;
+      height: calc(100vh - 32%); 
+      top: 10%;
+      left: 5%;
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      object-fit: fill;
+    }
   }
   
   .room_container {
@@ -359,8 +385,9 @@
     width: 100%;
     height: 100%;
     position: relative;
+    object-fit: cover;
   }
-  
+
   .screen_share_track {
     position: absolute;
     display: flex;
@@ -379,9 +406,12 @@
   }
   
   video {
-    padding: 8px;
+    /* padding: 8px; */
     width: 100%;
     height: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border: 4px solid  rgb(13, 168, 168);
   }
   
   .room_label {
@@ -404,6 +434,7 @@
   .video_track_container:first-child:nth-last-child(1) {
     width: 100%;
     height: 100%;
+    left: -5%;
     position: relative;
   }
   
@@ -411,14 +442,16 @@
   .video_track_container:first-child:nth-last-child(2) ~ .video_track_container {
     width: 40%;
     height: 50%;
+    left: 5%;
     position: relative;
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
   
   .video_track_container:first-child:nth-last-child(3),
   .video_track_container:first-child:nth-last-child(3) ~ .video_track_container {
     width: 40%;
     height: 50%;
+    left: 5%;
     position: relative;
   }
   
@@ -433,6 +466,7 @@
   .video_track_container:first-child:nth-last-child(5) ~ .video_track_container {
     width: 33%;
     height: 33%;
+    left: 5%;
     position: relative;
   }
   
@@ -440,6 +474,7 @@
   .video_track_container:first-child:nth-last-child(6) ~ .video_track_container {
     width: 33%;
     height: 33%;
+    left: 5%;
   }
   
   .video_track_container:first-child:nth-last-child(7),
