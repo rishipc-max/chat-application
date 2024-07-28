@@ -4,12 +4,10 @@ import Logo from "../assets/hlogo.png";
 const AdvertiseMe = () => {
   return (
     <>
-    <Box sx={{
-        width:'230px',
+    <Box textAlign={'center'} sx={{
+        width:'100%',
         position: 'absolute',
         bottom: '12px',
-        left:  "51%",
-        transform: "translateX(-50%)",
     }}>
       
      <Typography fontFamily={'monospace'} variant="h6"> Created By<span> </span><img src={Logo} alt="R" width={20}/> 
