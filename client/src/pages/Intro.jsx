@@ -1,6 +1,7 @@
 import { Box, Button, Card, Container, Stack, Typography } from "@mui/material"
 import { useNavigate } from "react-router-dom";
 import ToggleSwitch from "../components/ToggleTheme";
+import CBYME from "../components/AdvertiseMe";
 
 const Intro = () => {
 
@@ -45,6 +46,7 @@ const Intro = () => {
       </Box>  
     </Container>
     <ToggleSwitch />
+    <CBYME />
     </div>
   )
 }
