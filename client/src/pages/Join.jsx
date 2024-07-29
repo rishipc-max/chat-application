@@ -7,6 +7,7 @@ import {
   Stack,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import ToggleSwitch from "../components/ToggleTheme";
 import { useEffect, useState } from "react";
@@ -19,7 +20,6 @@ import CBYME from "../components/AdvertiseMe";
 
 
 const Join = () => {
-  const theme = useTheme();
 
   const dispatch = useDispatch();
 
@@ -87,6 +87,9 @@ const Join = () => {
     navigate("/");
   };
 
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <div style={{ position: "relative" }}>
       <Container>
@@ -108,7 +111,7 @@ const Join = () => {
               justifyContent: "center",
               px: 4,
               py: 8,
-              width: 400,
+              width: isSmallScreen ? 300 : 400,
               rowGap: 6,
             }}
           >
