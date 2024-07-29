@@ -1,7 +1,8 @@
-import { Box, Button, Card, Container, Stack, Typography } from "@mui/material"
+import { Box, Button, Card, Container, Stack, Typography, useMediaQuery } from "@mui/material"
 import { useNavigate } from "react-router-dom";
 import ToggleSwitch from "../components/ToggleTheme";
 import CBYME from "../components/AdvertiseMe";
+import { useTheme } from "@emotion/react";
 
 const Intro = () => {
 
@@ -13,6 +14,8 @@ const Intro = () => {
   const pushToJoinRoomPage = () => {
     navigate('/join-room')
   }
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <div style={{position: 'relative'}}>
@@ -32,7 +35,7 @@ const Intro = () => {
           justifyContent: 'center',
           px: 4,
           py: 8,
-          width: 400,
+          width: isSmallScreen ? 300 : 400,
           rowGap: 6
         }}>
           <Typography variant="h3" textAlign='center'>

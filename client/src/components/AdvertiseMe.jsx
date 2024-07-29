@@ -10,8 +10,8 @@ const AdvertiseMe = () => {
         bottom: '12px',
     }}>
       
-     <Typography fontFamily={'monospace'} variant="h6"> Created By<span> </span><img src={Logo} alt="R" width={20}/> 
-      ishi Patel</Typography> 
+     <Typography fontFamily={'monospace'} variant="h6"> Developed By<span> </span><img src={Logo} alt="R" width={20}/> 
+      ishi</Typography> 
     </Box>
     </>
   )

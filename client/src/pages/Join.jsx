@@ -15,6 +15,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { SetConnectOnlyWithAudio, SetIdentity, SetRoomId, UpdateIsRoomHost } from "../redux/slices/app";
 import { useTheme } from "@mui/material/styles";
 import { getRoomExists } from "../utils/api";
+import CBYME from "../components/AdvertiseMe";
+
 
 const Join = () => {
   const theme = useTheme();
@@ -176,6 +178,7 @@ const Join = () => {
         </Box>
       </Container>
       <ToggleSwitch />
+      <CBYME />
     </div>
   );
 };
